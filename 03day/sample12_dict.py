@@ -32,3 +32,7 @@ print(list(m.items()))  # items()로 dict_items(튜플)를 반환 -> list()로 �
 print(len(m))
 print("username" in m)
 print("홍길동" in m)  # 딕트는 in을 쓸 때 키값으로 찾는다 밸류로는 못 찾는다
+
+from pprint import pprint as pp
+m = {"username": "홍길동", "age": 20, "address": "서울", "email": "sdfsdf@naver.com", "phone": "010-3829-1241"}
+print(pp(m))  # 딕트가 충분히 길 때 가독성을 위해 한 줄씩 출력해줌

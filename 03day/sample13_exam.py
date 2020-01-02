@@ -42,3 +42,8 @@ print("총합 :", sum(nums))
 scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
 *valid_score, _, _ = scores  # start expression을 사용할 때 필요없는 변수는 언더바로 대체
 print(valid_score)
+
+# 9. 두 개의 튜플을 하나의 딕셔너리로
+keys = ("apple", "pear", "peach")
+vals = [300, 250, 400, 777]
+print(dict(zip(keys, vals)))  # zip()으로 1대1대응으로(튜플로) 묶어줄 수 있다, 두 집합형 데이터의 요소 수가 다르면 대응되는 것 까지만 묶어줌
