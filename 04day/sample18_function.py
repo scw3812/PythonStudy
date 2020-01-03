@@ -11,7 +11,7 @@ def hello():
     print("hello1")
 
 
-def hello2(a):
+def hello2(a, b):
     print("hello2\n"*a, end="")
 
 
@@ -24,6 +24,6 @@ def hello4(a):
 
 
 hello()
-hello2(1)
+hello2(b=1, a=1)  # 함수 호출시 파라미터변수=인자값 형식으로 사용 가능, 순서 상관 없이
 print(hello3())
 print(hello4(1), end="")
