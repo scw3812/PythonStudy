@@ -44,7 +44,7 @@ else:
 
 # 6. 주민번호 입력받고 성별 출력
 id_num = input("주민번호를 입력하세요\n")
-if id_num[7] == "1" or "3":
+if id_num[7] == "1" or id_num[7] == "3":
     print("남자")
 else:
     print("여자")
