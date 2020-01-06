@@ -46,3 +46,13 @@ country = ["대한민국", "중국", "미국"]
 capital = ["서울", "베이징", "워싱턴"]
 for a in zip(country, capital):
     print("국가명:", a[0], "수도:", a[1])
+
+# 7. 랜덤값
+import random
+print("[0, 1) 사이의 실수 랜덤값", random.random())
+print("[0, 10) 사이의 실수 랜덤값", random.random() * 10)
+print("[특정 범위) 정수 랜덤값", random.randrange(1, 7))
+print("[특정 범위] 정수 랜덤값", random.randint(1, 7))
+m = ["짜장면", "짬뽕", "볶음밥", "탕수육", "유산슬"]
+choice = random.choice(m)  # choice(iterable) 집합형 안의 임의의 데이터 얻기
+print(choice)
