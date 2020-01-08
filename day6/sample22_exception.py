@@ -8,6 +8,8 @@
 #       예외발생시 처리코드
 #    except [Exception 클래스 as e]:
 #       예외발생시 처리코드              => 반복해서 여러 예외를 처리
+#    finally:
+#       예외발생 여부와 상관없이 반드시 수행해야 되는 문장 ex) 파일 닫기(close())
 
 print("시작")
 num = input("숫자를 입력하세요 :\n")
@@ -16,4 +18,6 @@ try:
     print("결과값:", result)
 except:
     print("나눌 수 없습니다.")
+finally:
+    print("close")
 print("정상종료")

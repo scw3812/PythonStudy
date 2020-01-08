@@ -1,4 +1,4 @@
-# 부모 요소 상속을 방지 -> private -> 앞에만 __(언더바 2개)
+# 부모 요소 상속을 방지(은닉화) -> private -> 앞에만 __(언더바 2개)
 
 class SuperClass:
     def __init__(self):
