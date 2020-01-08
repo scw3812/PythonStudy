@@ -5,13 +5,17 @@
 
 from random import randint
 
+class TwoError(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+
 def my_random():
     try:
         n = randint(1, 4)
         if n == 2:
-            raise Exception("2")  # 아무 예외 클래스로 해도 됨 -> 하지만 적합한 클래스를 쓰는게 맞지 -> 직접 예외 클래스를 만들어서 사용
+            raise TwoError("2")  # 아무 예외 클래스로 해도 됨 -> 하지만 적합한 클래스를 쓰는게 맞지 -> 직접 예외 클래스를 만들어서 사용
         print("랜덤값:", n)
-    except Exception as e:
+    except TwoError as e:
         print("예외", e)
 
 
@@ -19,5 +23,5 @@ my_random()
 
 # try:
 #     my_random()
-# except Exception as e:
+# except TwoError as e:
 #     print("예외", e)
