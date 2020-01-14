@@ -4,7 +4,7 @@ s = pd.Series([10, 20])
 print(s)
 
 # 1. 시리즈 - 스칼라
-print(s+2)
+print(s + 2)
 
 # 2. 시리즈 - 시리즈
 print(s + s)
