@@ -64,3 +64,25 @@ print("행으로 검색:\n", df.filter(["mouse", "rabbit"], axis=0))
 print("열로 검색:\n", df.filter(["one", "two"], axis=1))
 print("행으로 검색, bit 포함:\n", df.filter(like="bit", axis=0))
 print("열로 검색, t 포함:\n", df.filter(like="t", axis=1))
+
+# 8. apply() 사용자 정의 함수를 시리즈나 데이터프레임에서 사용
+# Series
+s = pd.Series([1, 2, 3])
+print(s * 2)
+
+def my_mul(n):
+    return n * 2
+
+
+print(s.apply(my_mul))
+
+def my_mul2(n, a):
+    return n * a
+
+
+print(s.apply(my_mul2, a=3))
+
+my_mul3 = lambda n, a: n * a
+print(s.apply(my_mul3, a=4))
+
+print(s.apply(lambda n, a: n * a, a=3))  # 일반적으로 많이 쓰는 형식
