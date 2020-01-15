@@ -24,3 +24,21 @@ change_df = df.fillna(0)
 print(change_df)
 change_df = df.fillna({"나이": 0, "이름": "NA"})  # 인자로 딕트를 넣어줘서 선택적 변경 가능
 print(change_df)
+change_df = df.fillna({"나이": {0: 0}})  # 인자로 딕트를 넣어줘서 선택적 변경 가능
+print(change_df)
+
+arr = np.arange(9).reshape((3, 3))
+df = pd.DataFrame(arr, index=list('acd'), columns=["X", "Y", "Z"])
+print(df)
+df2 = df.reindex(list('abcd'))
+print(df2)
+
+# 1. 명시적으로 지정된 임의의 값으로 채우기
+df2 = df.reindex(list('abcd'), fill_value="N")
+print(df2)
+# 2. front 값으로 채우기
+df2 = df.reindex(list('abcd'), method="ffill")
+print(df2)
+# 3. back 값으로 채우기
+df2 = df.reindex(list('abcd'), method="bfill")
+print(df2)
